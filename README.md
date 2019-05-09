@@ -1,6 +1,8 @@
 # Heroku Buildpack for Ghostscript
 
-Currently installs Ghostscript 9.23 on Heroku.
+Currently installs Ghostscript on Heroku.
+
+This buildpack is locked to version 9.21 due to application requirements.
 
 ## Install
 
@@ -12,7 +14,7 @@ Currently installs Ghostscript 9.23 on Heroku.
     $ cd /path/to/your-app
     $ cat .buildpacks
     https://github.com/heroku/heroku-buildpack-ruby.git
-    https://github.com/bvirlet/heroku-buildpack-ghostscript.git
+    https://github.com/brandoncc/heroku-buildpack-ghostscript.git
 
     # Push changes to deploy
     $ git push
