@@ -9,7 +9,7 @@ BINARY="ghostscript-9.21-linux-x86_64/gs-921-linux-x86_64"
 LOCATION="$BUILD_DIR/vendor/gs/bin"
 
 mkdir -p $LOCATION
-curl $PACKAGE -s -o - | tar xzf - -C $LOCATION
+curl $PACKAGE -L -s -o - | tar xzf - -C $LOCATION
 mv $LOCATION/$BINARY $LOCATION/gs
 
 echo "-----> Building runtime environment for Ghostscript"
