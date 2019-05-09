@@ -11,8 +11,9 @@ LOCATION="$BUILD_DIR/vendor/gs/bin"
 mkdir -p $LOCATION
 curl $PACKAGE -L -s -o - | tar xzf - -C $LOCATION
 mv $LOCATION/$BINARY $LOCATION/gs
+rm -rf "ghostscript-9.21-linux-x86_64"
 
 echo "-----> Building runtime environment for Ghostscript"
 
 mkdir -p $BUILD_DIR/.profile.d
-echo "export PATH=\"\$HOME/vendor/gs/bin:\$PATH\"" > $BUILD_DIR/.profile.d/ghostscript.sh
+echo "export PATH=\"/app/bin:\$HOME/vendor/gs/bin:\$PATH\"" > $BUILD_DIR/.profile.d/ghostscript.sh
